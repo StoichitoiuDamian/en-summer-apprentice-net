@@ -4,14 +4,14 @@ namespace TMS.ApiEndava.Repositories
 {
     public interface IOrderRepository
     {
-        IEnumerable<Order1> GetAll();
+        IEnumerable<Order> GetAll();
 
-        Task<Order1> GetById(long id);
+        Task<Order> GetById(long id);
 
-        int Add(Order1 @order);
+        int Add(Order @order);
 
-        void Update(Order1 @order);
+        void Update(Order @order);
 
-        void Delete(Order1 @order);
+        void Delete(Order @order);
     }
 }

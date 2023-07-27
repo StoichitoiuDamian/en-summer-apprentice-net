@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TMS.ApiEndava.Models;
 using TMS.ApiEndava.Models.Dto;
 using TMS.ApiEndava.Repositories;
 
@@ -12,11 +14,14 @@ namespace TMS.ApiEndava.Controllers
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;
+        private readonly ITicketCategoryRespository _ticketCategoryRespository;
 
-        public OrderController(IOrderRepository orderRepository, IMapper mapper)
+        public OrderController(IOrderRepository orderRepository, IMapper mapper, ITicketCategoryRespository ticketCategoryRespository)
         {
             _orderRepository = orderRepository;
             _mapper = mapper;
+            _ticketCategoryRespository = ticketCategoryRespository;
+          
         }
 
         [HttpGet]
@@ -58,10 +63,27 @@ namespace TMS.ApiEndava.Controllers
             {
                 return NotFound();
             }
+
+            if (orderPatch.ticketCategoryId != 0)
+            {
+                var ticketCategory = await _ticketCategoryRespository.GetById((int)orderPatch.ticketCategoryId);
+                   
+                if (ticketCategory == null)
+                {
+                    return NotFound("Ticket category not found");
+                }
+
+                double totalPrice = (double)(ticketCategory.Price * orderPatch.NumberOfTickets);
+                orderEntity.TotalPrice = totalPrice;
+            }
+            else
+            {
+                return NotFound("Ticket category ID is missing or invalid");
+            }
+
             _mapper.Map(orderPatch, orderEntity);
             _orderRepository.Update(orderEntity);
             return Ok(orderEntity);
-
         }
 
         [HttpDelete]

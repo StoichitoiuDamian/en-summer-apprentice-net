@@ -4,9 +4,9 @@
     {
         public long OrderId { get; set; }
 
-        public double totalPrice { get; set; }
-
         public int NumberOfTickets { get; set; }
+
+        public long ticketCategoryId { get; set; }
 
     }
 }

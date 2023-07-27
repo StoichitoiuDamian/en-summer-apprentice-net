@@ -8,8 +8,8 @@ namespace TMS.ApiEndava.Profiles
     {
         public OrderProfile()
         {
-            CreateMap<Order1, OrderDto>();
-            CreateMap<OrderPatchDto, Order1>();
+            CreateMap<Order, OrderDto>();
+            CreateMap<OrderPatchDto, Order>();
         }
     }
 }

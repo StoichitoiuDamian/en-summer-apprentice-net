@@ -6,14 +6,14 @@ namespace TMS.ApiEndava.Repositories
 {
     public interface IEventRepository
     {
-        IEnumerable<Event1> GetAll();
+        IEnumerable<Event> GetAll();
         
-       Task<Event1> GetById(long id);
+       Task<Event> GetById(long id);
 
-        int Add(Event1 @event);
+        int Add(Event @event);
 
-        void Update (Event1 @event);
+        void Update (Event @event);
         
-        void Delete (Event1 @event);
+        void Delete (Event @event);
     }
 }

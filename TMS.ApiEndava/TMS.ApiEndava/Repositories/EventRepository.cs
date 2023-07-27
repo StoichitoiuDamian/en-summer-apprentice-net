@@ -12,25 +12,25 @@ namespace TMS.ApiEndava.Repositories
             _dbContext = new EndavaPracticaV3Context();
         }
 
-        public int Add(Event1 @event)
+        public int Add(Event @event)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Event1 @event)
+        public void Delete(Event @event)
         {
             _dbContext.Remove(@event);
             _dbContext.SaveChanges();
         }
 
-        public IEnumerable<Event1> GetAll()
+        public IEnumerable<Event> GetAll()
         {
             var events = _dbContext.Event1s;
 
             return events;
         }
 
-        public async Task<Event1> GetById(long id)
+        public async Task<Event> GetById(long id)
         {
             var @event = await _dbContext.Event1s.Where(e => e.EventId == id).FirstOrDefaultAsync();
 
@@ -39,7 +39,7 @@ namespace TMS.ApiEndava.Repositories
 
 
 
-        public void Update(Event1 @event)
+        public void Update(Event @event)
         {
             _dbContext.Entry(@event).State = EntityState.Modified;
             _dbContext.SaveChanges();

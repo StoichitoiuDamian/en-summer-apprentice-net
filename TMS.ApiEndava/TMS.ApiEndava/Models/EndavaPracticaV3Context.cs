@@ -15,15 +15,15 @@ public partial class EndavaPracticaV3Context : DbContext
     {
     }
 
-    public virtual DbSet<Event1> Event1s { get; set; }
+    public virtual DbSet<Event> Event1s { get; set; }
 
     public virtual DbSet<EventType> EventTypes { get; set; }
 
-    public virtual DbSet<Order1> Order1s { get; set; }
+    public virtual DbSet<Order> Order1s { get; set; }
 
     public virtual DbSet<TicketCategory> TicketCategories { get; set; }
 
-    public virtual DbSet<User1> User1s { get; set; }
+    public virtual DbSet<User> User1s { get; set; }
 
     public virtual DbSet<Venue> Venues { get; set; }
 
@@ -33,7 +33,7 @@ public partial class EndavaPracticaV3Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Event1>(entity =>
+        modelBuilder.Entity<Event>(entity =>
         {
             entity.HasKey(e => e.EventId).HasName("PK__Event1__2DC7BD692CD061F2");
 
@@ -79,7 +79,7 @@ public partial class EndavaPracticaV3Context : DbContext
                 .HasColumnName("eventTypeName");
         });
 
-        modelBuilder.Entity<Order1>(entity =>
+        modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(e => e.OrderId).HasName("PK__Order1__0809337D8CA27AC0");
 
@@ -122,7 +122,7 @@ public partial class EndavaPracticaV3Context : DbContext
                 .HasConstraintName("FK1mu43sea6fje6ymr5i7th95h2");
         });
 
-        modelBuilder.Entity<User1>(entity =>
+        modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.UserId).HasName("PK__User1__CB9A1CDFE145F963");
 

@@ -12,25 +12,25 @@ namespace TMS.ApiEndava.Repositories
             _dbContext = new EndavaPracticaV3Context();
         }
 
-        public int Add(Order1 @order)
+        public int Add(Order @order)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Order1 order)
+        public void Delete(Order order)
         {
             _dbContext.Remove(order);
             _dbContext.SaveChanges();
         }
 
-        public IEnumerable<Order1> GetAll()
+        public IEnumerable<Order> GetAll()
         {
             var @order = _dbContext.Order1s.ToList();
 
             return order;
         }
 
-        public async Task<Order1> GetById(long id)
+        public async Task<Order> GetById(long id)
         {
             var @order = await _dbContext.Order1s.Where(e => e.OrderId == id).FirstOrDefaultAsync();
 
@@ -39,7 +39,7 @@ namespace TMS.ApiEndava.Repositories
 
 
 
-        public void Update(Order1 @order)
+        public void Update(Order @order)
         {
             _dbContext.Entry(@order).State = EntityState.Modified;
             _dbContext.SaveChanges();

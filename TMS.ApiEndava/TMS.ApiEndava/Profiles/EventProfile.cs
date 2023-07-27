@@ -9,9 +9,9 @@ namespace TMS.ApiEndava.Profiles
     {
         public EventProfile() 
         {
-            CreateMap<Event1, EventDto>().ReverseMap();
+            CreateMap<Event, EventDto>().ReverseMap();
 
-            CreateMap<Event1,EventPatchDto>().ReverseMap();
+            CreateMap<Event,EventPatchDto>().ReverseMap();
         }
     }
 }
