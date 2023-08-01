@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMS.ApiEndava", "TMS.ApiEndava\TMS.ApiEndava.csproj", "{490A184E-59E7-458A-9DFF-1F521F0D0A1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMS.ApiEndava", "TMS.ApiEndava\TMS.ApiEndava.csproj", "{490A184E-59E7-458A-9DFF-1F521F0D0A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTeste", "UnitTeste\UnitTeste.csproj", "{0D09F29F-7B77-4AF8-B227-A7B4161DD874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{490A184E-59E7-458A-9DFF-1F521F0D0A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{490A184E-59E7-458A-9DFF-1F521F0D0A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{490A184E-59E7-458A-9DFF-1F521F0D0A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D09F29F-7B77-4AF8-B227-A7B4161DD874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D09F29F-7B77-4AF8-B227-A7B4161DD874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D09F29F-7B77-4AF8-B227-A7B4161DD874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D09F29F-7B77-4AF8-B227-A7B4161DD874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

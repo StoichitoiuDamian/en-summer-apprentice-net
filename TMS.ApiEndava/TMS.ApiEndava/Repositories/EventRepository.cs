@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TMS.ApiEndava.Exceptions;
 using TMS.ApiEndava.Models;
 
 namespace TMS.ApiEndava.Repositories
@@ -33,6 +34,9 @@ namespace TMS.ApiEndava.Repositories
         public async Task<Event> GetById(long id)
         {
             var @event = await _dbContext.Event1s.Where(e => e.EventId == id).FirstOrDefaultAsync();
+
+            if (@event == null)
+                throw new EntityNotFoundException(id,nameof(Event));
 
             return @event;
         }

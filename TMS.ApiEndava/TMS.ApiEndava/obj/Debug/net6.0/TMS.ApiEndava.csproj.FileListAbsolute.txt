@@ -87,3 +87,9 @@ D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\System.Text.Json.d
 D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\AutoMapper.dll
 D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\nlog.config
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\NLog.dll
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\Castle.Core.dll
+D:\Endava\dotNet\TMS.ApiEndava\TMS.ApiEndava\bin\Debug\net6.0\Moq.dll

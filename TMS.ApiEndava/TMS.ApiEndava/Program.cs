@@ -1,10 +1,16 @@
+using NLog.Web;
 using TMS.ApiEndava.Profiles;
 using TMS.ApiEndava.Repositories;
 using TMS.ApiEndava.Services;
+using TMS.ApiEndava.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//Nlog
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -25,7 +31,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 
 app.UseAuthorization();
 
